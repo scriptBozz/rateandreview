@@ -1,0 +1,204 @@
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.homepage{
+  width: 100%;
+}
+
+/* Top Navigation Bar */
+.top-nav {
+    background-color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+.top-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+@media(max-width: 750px){
+  .top-nav ul {
+    list-style: none;
+    display: none;
+    
+}}
+
+.top-nav a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Hero Section */
+.hero-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f5f5f5;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero-section p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background-color: #0073e6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .top-nav ul {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        width: 100%;
+    }
+
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-section p {
+        font-size: 1.2rem;
+    }
+
+    .cta-button {
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    
+
+   
+}
+
+
+.review-slider {
+    overflow-x: auto; /* Allow horizontal scrolling */
+    white-space: nowrap; /* Prevent line breaks */
+    padding: 20px 0; /* Add some vertical padding */
+    scroll-snap-type: x mandatory; /* Enable snap scrolling */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.review-slider-inner {
+    display: inline-block; /* Allow child elements to flow inline */
+}
+
+.review-slide {
+    display: inline-block; /* Ensure slides are inline */
+    text-align: center;
+    padding: 20px;
+    background-color: #333; /* Dark background for a Netflix-like feel */
+    border-radius: 10px;
+    color: white;
+    margin-right: 15px; /* Space between slides */
+    width: 200px; /* Fixed width for consistent layout */
+    scroll-snap-align: center; /* Center snapping effect */
+    transition: transform 0.3s ease;
+}
+
+.review-slide:hover {
+    transform: scale(1.05); /* Slightly scale up on hover */
+}
+
+.review-slide p {
+    font-size: 0.7rem;
+    margin-bottom: 10px;
+}
+
+.review-slide h4 {
+    font-size: 0.9rem;
+    color: #e50914; /* Netflix red */
+}
+
+/* Hide scrollbar for better aesthetics (optional) */
+.review-slider::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+/* Container for search input and button */
+.search-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Styling the search input */
+.search-input {
+  padding: 10px;
+  width: 100%;
+  max-width: 500px;
+  border: 2px solid #ccc;
+  border-radius: 25px 0 0 25px;
+  font-size: 16px;
+  outline: none;
+  transition: width 0.4s ease-in-out;
+  box-sizing: border-box;
+}
+
+/* Styling the search button inside the search input */
+.search-button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 0 25px 25px 0;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.search-button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .search-input {
+    font-size: 14px;
+    padding: 8px;
+  }
+  
+  .search-button {
+    font-size: 16px;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .search-input {
+    font-size: 12px;
+    padding: 6px;
+  }
+  
+  .search-button {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+}
